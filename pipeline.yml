@@ -4,7 +4,7 @@ resources:
         type: git
         source:
         uri: https://github.com/codeStud/Concourse
-        branch: master
+        branch: main
     
     jobs:
     - name: job-hello-world
@@ -12,4 +12,4 @@ resources:
         plan:
         - get: resource1
         - task: hello-world
-        file: resource1/tasks/task_hello_world.yml
+        file: resource1/task_hello_world.yml
