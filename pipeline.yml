@@ -1,0 +1,15 @@
+---
+resources:
+    - name: resource1
+        type: git
+        source:
+        uri: https://github.com/codeStud/Concourse
+        branch: master
+    
+    jobs:
+    - name: job-hello-world
+        public: true
+        plan:
+        - get: resource1
+        - task: hello-world
+        file: resource1/tasks/task_hello_world.yml
